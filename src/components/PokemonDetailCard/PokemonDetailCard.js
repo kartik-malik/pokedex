@@ -18,7 +18,7 @@ const PokemonDetailCard=({name,imageUrl})=>{
     <div className={classes.Detail__2}>
         {
             data.stats.map((item)=>{
-                return <li className={classes.Stats__list}><span>{item.stat.name}</span><StatBar basestat={item.base_stat}/></li>
+                return <li className={classes.Stats__list} key={item.stat.name}><span className={classes.stat__name}>{item.stat.name}</span><StatBar basestat={item.base_stat}/></li>
             })
         }
     </div>
