@@ -5,10 +5,14 @@ import PagingBar from '../PagingBar/PagingPar';
 
 const PokePage =()=>{
     const [data,setData]=useState([]);
-    const [offset,setOffSet] =useState(20);
+    const [offset,setOffSet] =useState(0);
+    const [count,setCount]=useState(0);
     useEffect(()=>{
         fetchAll(offset).then((data)=>{
+            
+            console.log(data);
              setData(data.results);
+             setCount(data.count);
         })
     },[offset])
     const updateOffset=(val)=>{
@@ -19,7 +23,7 @@ const PokePage =()=>{
        <PokeList data={data}>
   
        </PokeList>
-        <PagingBar updateOffset={updateOffset} offsetValue={offset}/ >
+        <PagingBar updateOffset={updateOffset} offsetValue={offset} count={count}/ >
        </>
     )
 }

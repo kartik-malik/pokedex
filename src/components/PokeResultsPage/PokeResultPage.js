@@ -12,11 +12,16 @@ const PokeResultPage=()=>{
        fetchOne(searchQuery).then((data)=>{
         console.log(data);   
         setData(data);
+       }).catch((err)=>{
+         console.log(err.response.data.status);
+         
+         if(err.response.data.status==404)
+         setData(null);
        })
     },[searchQuery])
     return (
         <>
-       { data && <PokeCard title={data.name} id={data.id}/>}
+       { data ?<PokeCard title={data.name} id={data.id}/> : "No result found"}
         </>
     )
 }
