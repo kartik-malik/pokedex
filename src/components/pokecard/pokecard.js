@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import PokemonDetailCard from "../PokemonDetailCard/PokemonDetailCard";
 import Modal from "../UI/Modal";
 import classes from "./pokecard.module.css";

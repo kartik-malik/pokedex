@@ -20,10 +20,16 @@ const PokePage =()=>{
     }
     return (
         <>
+       {data.length>0 && (
+       <>
        <PokeList data={data}>
   
-       </PokeList>
-        <PagingBar updateOffset={updateOffset} offsetValue={offset} count={count}/ >
+  </PokeList>
+   <PagingBar updateOffset={updateOffset} offsetValue={offset} count={count}/ >
+       </>
+       )
+   
+   }
        </>
     )
 }
