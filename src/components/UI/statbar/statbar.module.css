@@ -1,0 +1,11 @@
+.statbar__main {
+    flex: 0.5;
+    display: inline-block;
+    position: relative;
+    background-color: thistle;
+}
+.statbar__value {
+    background: red;
+    display: inline-block;
+    height: 100%;
+}
