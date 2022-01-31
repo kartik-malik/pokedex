@@ -21,7 +21,7 @@ const PokeResultPage=()=>{
     },[searchQuery])
     return (
         <>
-       { data ?<PokeCard title={data.name} id={data.id}/> : "No result found"}
+       { data ?<PokeCard title={data.name} id={data.id} imageUrl={data.species.url}/> : "No result found"}
         </>
     )
 }
