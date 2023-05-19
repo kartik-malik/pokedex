@@ -47,7 +47,8 @@
   .adcontainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fit, 250px);
+    grid-template-rows: repeat(auto-fit, 900px);
+    grid-auto-rows: 400px;
     gap: 3rem;
   }
   .addButton {
